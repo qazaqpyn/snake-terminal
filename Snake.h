@@ -27,6 +27,7 @@ public:
     }
     void set_face(Face new_face)
     {
+        // Don't allow 180 degree move
         if (2 != abs(new_face - face))
         {
             face = new_face;
@@ -57,6 +58,7 @@ public:
         {
             y = max_y <= y + 1 ? 0 : y + 1;
         }
+        // invalid direction doesnt change current direction
         return y * max_x + x;
     }
 
@@ -64,6 +66,7 @@ public:
     {
         int next = next_head();
 
+        // end game on collision with itself
         if (having(next))
         {
             is_alive = 0;
