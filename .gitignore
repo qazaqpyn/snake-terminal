@@ -1,0 +1,15 @@
+# Compiled binary files
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+
+# Build directories
+build/
+debug/
+release/
+bin/
